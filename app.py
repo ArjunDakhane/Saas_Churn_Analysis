@@ -27,7 +27,7 @@ def load_and_train():
     if os.path.exists("model.pkl"):
         return joblib.load("model.pkl")
 
-    df = pd.read_csv("churn_analysis/churn/Telco_customer_churn2.csv")
+    df = pd.read_csv("Telco_customer_churn2.csv")
     df.columns = df.columns.str.strip()
 
     leakage_cols = ["Churn Label", "Churn Score", "Churn Reason"]
